@@ -3,7 +3,7 @@ import type { StorybookConfig } from "@storybook/nextjs-vite"
 import { mergeConfig } from "vite"
 
 const config: StorybookConfig = {
-	stories: ["../src/**/*.stories.*"],
+	stories: [{ titlePrefix: "Features", directory: "../src/features", files: "**/*.stories.*" }],
 	addons: [
 		"@chromatic-com/storybook",
 		"@storybook/addon-docs",
