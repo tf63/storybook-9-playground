@@ -4,16 +4,13 @@ import { mergeConfig } from "vite"
 
 const config: StorybookConfig = {
 	stories: ["../src/**/*.stories.*"],
-	// addons: [
-	//     '@chromatic-com/storybook',
-	//     '@storybook/addon-essentials',
-	//     '@storybook/addon-links',
-	//     '@storybook/addon-interactions',
-	//     '@storybook/addon-storysource',
-	//     '@storybook/addon-a11y',
-	//     '@storybook/addon-console',
-	//     '@whitespace/storybook-addon-html',
-	// ],
+	addons: [
+		"@chromatic-com/storybook",
+		"@storybook/addon-docs",
+		"@storybook/addon-a11y",
+		"@storybook/addon-vitest",
+		"@whitespace/storybook-addon-html",
+	],
 	framework: "@storybook/nextjs-vite",
 	viteFinal: (config) => {
 		return mergeConfig(config, {
