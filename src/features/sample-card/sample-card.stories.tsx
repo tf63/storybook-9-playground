@@ -1,13 +1,13 @@
-import type { Meta, StoryFn, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/react"
 import { SampleCard } from "./sample-card"
 
 type SampleCardType = typeof SampleCard
 
 export default {
-	title: "React/SampleCard",
+	title: "SampleCard",
 	component: SampleCard,
 	render: (props) => <SampleCard {...props} />,
-	decorators: [(Story: StoryFn) => <Story />],
+	decorators: [(Story) => <Story />],
 } satisfies Meta<SampleCardType>
 
 export const Default: StoryObj<SampleCardType> = {
